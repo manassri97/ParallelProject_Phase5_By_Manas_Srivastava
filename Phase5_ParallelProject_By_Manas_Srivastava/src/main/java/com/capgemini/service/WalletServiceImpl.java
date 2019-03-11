@@ -107,4 +107,16 @@ public class WalletServiceImpl implements WalletService {
 			throw new WalletAccountDoesNotExist("No Wallet Exist");
 	}
 
+	public List<Customer> showAllCustomer() {
+		return walletRepo.showAllCustomer();
+	}
+
+	public List<Customer> showCustomerByName(String name) {
+		return walletRepo.showCustomerByName(name);
+	}
+
+	public List<Customer> showCustomerClause(BigDecimal min_balance, BigDecimal max_balance) {
+		return walletRepo.showCustomerClause(min_balance, max_balance);
+	}
+
 }

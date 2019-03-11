@@ -18,4 +18,7 @@ public interface WalletService {
 	public List<Customer> fundTransfer(String sourceMobile, String targetMobileNo, BigDecimal amount) throws InsufficientWalletBalanceException, WalletAccountDoesNotExist;
 	public Customer depositAmount(String mobileNo, BigDecimal amount) throws WalletAccountDoesNotExist;
 	public Customer withdrawAmount(String mobileNo, BigDecimal amount) throws InsufficientWalletBalanceException, WalletAccountDoesNotExist;
+	public List<Customer> showAllCustomer();
+	public List<Customer> showCustomerByName(String name);
+	public List<Customer> showCustomerClause(BigDecimal min_balance, BigDecimal max_balance);
 }

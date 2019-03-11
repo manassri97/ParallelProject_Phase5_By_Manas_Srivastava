@@ -1,4 +1,4 @@
-package com.capgemini.beans;
+	package com.capgemini.beans;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
